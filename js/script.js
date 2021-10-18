@@ -7,6 +7,7 @@ let addForm = document.getElementsByClassName('add-words-form-container')[0];
 let addwordform = document.getElementById('add-words-from');
 
 function closeForm(){
+   document.getElementById('add-words-form').reset();
    if(addForm.classList.contains('toggle-open')){
       addForm.classList.remove('toggle-open')
       addForm.classList.add('toggle-close')
@@ -30,7 +31,7 @@ function addWordInput(){
    newLabel.classList.add('word-input'); 
    let wordForm = document.getElementById('add-words-form');
    //let newinput = `<label for="add-word" class="word-input">add <input type="text" name="" id="" value=""> <button type="button" id="delete-input" onclick="deleteInput()">X</button></label>`;
-   let newinput = `add <input type="text" name="" id="" value=""> <button type="button" id="delete-input" onclick="deleteInput()">X</button>`;
+   let newinput = `add <input type="text" name="" id="" value=""> <button type="button" class="delete-input">X</button>`;
    
    newLabel.innerHTML = newinput;
    //newLabel.appendChild(newinput);
@@ -39,24 +40,17 @@ function addWordInput(){
    //parentForm.innerHTML += newinput;
    
 }
-function deleteInput(){
-   //let removeInput = document.getElementsByClassName('.word-input');
-   let removeInput = label;
-   console.log(removeInput);
-   //removeInput.parentNode.removeChild(removeInput);
-   removeInput.remove();
-}
 
-function removeinp() {
+function deleteInput() {
    var ele = document.getElementsByClassName("delete-input");
    for (var i = 0; i < ele.length; i++) {
        ele[i].addEventListener('click', function (e) {
-           e.preventDefault();
+           //e.preventDefault();
            e.target.closest('label').remove();
        });
    }
 }
-removeinp();
+deleteInput();
 
 // var i=0;
 // function expand(){

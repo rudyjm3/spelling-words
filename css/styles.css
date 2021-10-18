@@ -176,7 +176,7 @@ body{
 #add-words-form hr{
    width: 100%;
 }
-#delete-input{
+.delete-input{
    position: relative;
    font-weight: 700;
    padding: 0 5.5px 0 5px;
