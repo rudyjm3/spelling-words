@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <title>Weekly Spelling Words - JS</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- online link to font awesome 5 below -->
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/all.css">
+  
+</head>
+
+<body>
+
+  <div class="wrapper container-center">
+     <!--  SIDE SECTION - LEFT COL-->
+    <div id="user-panel" class="left-col">
+       <div class="user-profile">
+          <img src="img\profile-placeholder.png" alt="user profile image" srcset="">
+          <div class="line-break"></div>
+          <h2 class="user-name">Jonathan S.</h2>
+       </div>
+       <!-- SPELLING WORDS FOR THE WEEK SECTION-->
+       <div class="spelling-words-container">
+          <p>Spelling words for this week <span class="date">Sept. 8th - 14th</span></p>
+          <ol>
+             <li>Word 1</li>
+             <li>Word 2</li>
+             <li>Word 3</li>
+             <li>Word 4</li>
+             <li>Word 5</li>
+             <li>Word 6</li>
+             <li>Word 7</li>
+             <li>Word 8</li>
+             <li>Word 9</li>
+             <li>Word 10</li>
+          </ol>
+       </div>
+    </div>
+
+    <!--  MAIN CONTENT SECTION - RIGHT COL-->
+    <div id="main-section" class="right-col">
+       <div class="header">
+          <h2>Complete The Sentence</h2>
+          <button type="button" id="open-form-btn" onclick="openForm()">Add Words List</button>
+          <p>Fill in the blank with one of the spelling words for the week to complete the sentence. Once you have used all the words to fill in the blanks, press submit button to check your answers.</p>
+          <div class="word-list-container">
+
+          </div>
+       </div>
+
+       <div class="sentence-container">
+         <form id="sentence-form" action="" method="post">
+            <ol class="sentence-list">
+               <li><label for="sent-1">The <input type="text" name="sent-1" id="sent-1" value="bandit"> got away from the police.</label></li>
+
+               <li><label for="sent-2">She felt strangely weightless and ready to  <input type="text" name="sent-2" id="sent-2" value="drift"> off with the next breeze.</label></li>
+
+               <li><label for="sent-1">The <input type="text" name="sent-1" id="sent-1" value="bandit"> got away from the police.</label></li>
+            </ol>
+            
+         </form>
+       </div>
+    </div>
+  </div>
+
+  <div class="add-words-form-container toggle-close">
+   <form id="add-words-form" action="" method="post">
+      <button type="button" id="close-form-btn" onclick="closeForm()">X</button>
+      <div class="add-words-form-header">
+         <h2>Add Words To Your List</h2>
+      </div>
+      <div class="add-btn-container">
+         <button id="add-input-btn" type="button" onclick="addWordInput()">Add word</button>
+      </div>
+      <hr>
+
+      <button type="button" id="delete-input" onclick="deleteInput(this)"><label for="add-word" class="word-input">add <input type="text" name="" id="" value=""></label> X</button>
+
+      <!--<label for="add-word" class="word-input">add <input type="text" name="" id="" value=""> <button type="button" id="delete-input" onclick="deleteInput(this)">X</button></label>-->
+
+      <label for="add-word" class="word-input">add <input type="text" name="" id="" value=""> <button type="button" class="delete-input" >X</button></label>
+     
+      <button type="button" id="word-from-submit-btn" onclick="">Submit</button>
+   </form>
+</div>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
