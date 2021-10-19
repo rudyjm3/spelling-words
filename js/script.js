@@ -34,7 +34,7 @@ function addWordInput(){
    let wordForm = document.getElementById('add-words-form');
    let savebtn = document.getElementById('word-from-submit-btn');
    //let newinput = `<label for="add-word" class="word-input">add <input type="text" name="" id="" value=""> <button type="button" id="delete-input" onclick="deleteInput()">X</button></label>`;
-   let newinput = `add <input type="text" name="" id="" value=""> <button type="button" class="delete-input" >X</button>`;
+   let newinput = `add <input type="text" name="" id="" value=""> <button type="button" class="delete-input" onclick="deleteInput()" >X</button>`;
    
    newLabel.innerHTML = newinput;
    //newLabel.appendChild(newinput);
@@ -46,24 +46,27 @@ function addWordInput(){
    
 }
 
-function deleteInput(label) {
+function deleteInput() {
    var ele = document.getElementsByClassName("delete-input");
    for (var i = 0; i < ele.length; i++) {
        ele[i].addEventListener('click', function (e) {
-           e.preventDefault();
+           //e.preventDefault();
            e.target.parentNode.closest('label').remove();
        });
    }
 }
 deleteInput();
 
-function deleteinput(){
-   let elements = document.getElementsByClassName('word-input');
-	//element.parentNode.removeChild(element);
-   for (var i = 0; i < elements.length; i++){
-      elements[0].parentNode.removeChild(elements[0]);
-   }
-}
+// function deleteinput(){
+//    let elements = document.getElementsByClassName('word-input');
+// 	//element.parentNode.removeChild(element);
+//    for (var i = 0; i < elements.length; i++){
+//       elements[0].parentNode.removeChild(elements[0]);
+//    }
+// }
+
+
+
 // var i=0;
 // function expand(){
 //   if(i==0){
