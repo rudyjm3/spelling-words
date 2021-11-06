@@ -54,7 +54,7 @@
           <button type="button" id="open-form-btn" onclick="openForm()">Add Words List</button>
           <p>Fill in the blank with one of the spelling words for the week to complete the sentence. Once you have used all the words to fill in the blanks, press submit button to check your answers.</p>
           <div class="word-list-container">
-
+            <ul id="word-list-top"></ul>
           </div>
        </div>
 
@@ -84,17 +84,16 @@
       </div>
       <hr>
 
-      <label for="add-word" class="word-input">add <input type="text" name="" id="" value=""> <button type="button" class="delete-input" >X</button></label>
+      <label for="add-word" class="word-input">add <input type="text" name="new-spelling-word" class="new-word" value=""> <button type="button" class="delete-input" >X</button></label>
 
-      <label for="add-word" class="word-input">add <input type="text" name="" id="" value=""> <button type="button" class="delete-input" >X</button></label>
+      <label for="add-word" class="word-input">add <input type="text" name="new-spelling-word" class="new-word" value=""> <button type="button" class="delete-input" >X</button></label>
 
-      <label for="add-word" class="word-input">add <input type="text" name="" id="" value=""> <button type="button" class="delete-input" >X</button></label>
+      <label for="add-word" class="word-input">add <input type="text" name="new-spelling-word" class="new-word" value=""> <button type="button" class="delete-input" >X</button></label>
 
-      <button type="button" id="word-from-submit-btn" onclick="">Save New Words</button>
+      <button type="button" id="word-from-submit-btn" onclick="addNewWords()
+      ">Save New Words</button>
    </form>
 </div>
 
 
   <script src="js/script.js"></script>
-</body>
-</html>

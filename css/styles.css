@@ -207,3 +207,11 @@ body{
    border-radius: 4px;
    color: white;
 }
+
+#word-list-top{
+   display: flex;
+   list-style: none;
+}
+#word-list-top li{
+   margin: 5px 10px;
+}
